@@ -1,0 +1,15 @@
+//Program to Print the Host Name and Host Address that taken by the user
+import java.util.*;
+import java.net.*;
+public class Host{
+	public static void main(String args[])
+			{
+					String host;
+					Scanner sc=new Scanner(System.in);
+					System.out.println("Enter the Url");
+					host=sc.nextLine();
+					InetAddress address=new InetAddress(host);
+					System.out.println("The Host name is" +getHostName());
+					System.out.println("The Address is" +getHostAddress());
+			}
+}

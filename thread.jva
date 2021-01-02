@@ -1,0 +1,25 @@
+//Program to illustrate the use of thread
+class PrintThread{
+	string name;
+	PrintThread(String name)
+		{
+		this.name=name;;
+		for(int i=0;i<10;i++)
+			{
+			System.out.println("Printing the Document " +i+ " of " +name);
+			}
+		}
+
+}
+class TestThread extends Thread{
+	public static void main(String args[])
+		{
+			PrintThread p=new PrintThread("Aakash");
+			PrintThread pt=new PrintThread("Amit");
+			p.start();
+			pt.start();
+
+
+		}
+
+}
